@@ -28,8 +28,6 @@ class FirstFragment : Fragment() {
     val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         // Handle the returned Uri
         Log.d("test","fd")
-     //   val correctPath = getFileName(uri!!)
-      //  Log.d("Correect file path", correctPath!!)
         binding.PDFJSView.source = uri!!
     }
 
@@ -76,18 +74,7 @@ class FirstFragment : Fragment() {
             val intent = Intent()
                 .setType("*/*")
                 .setAction(Intent.ACTION_GET_CONTENT)
-
-
-
             getContent.launch("*/*")
-//            val c = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-//                if (it.resultCode == Activity.RESULT_OK) {
-//                    val file = it.data
-//                    val iii = 0
-//                }
-//            }
-//            c.launch(intent)
-           // startActivityForResult(Intent.createChooser(intent, "Select a file"), 123)
         }
     }
 

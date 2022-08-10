@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "PDFJSView.Demo"
-include ':app'
-include ':pdfjsview'
+include(":app")
+include(":pdfjsview")
